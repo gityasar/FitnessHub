@@ -1,0 +1,387 @@
+.conception-calculator {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #fff0f6 0%, #ffe3ec 50%, #ffd6e7 100%); */
+}
+
+.conception-calculator h1 {
+  text-align: center;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #040506, #db34a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.calculator-form {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(210, 54, 105, 0.1);
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.input-group input[type="number"] {
+  width: 90%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.custom-calendar {
+  width: 100% !important;
+  max-width: 600px;
+  padding: 1rem;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  font-family: inherit !important;
+}
+
+/* button {
+  width: 100%;
+  padding: 1rem;
+  
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+button:hover {
+  /* background: #b52c57; */
+}
+
+.results-container {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.result-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(210, 54, 105, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ffe3ec;
+}
+
+.card-header h3 {
+  color: #d23669;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.result-card p {
+  color: #2c3e50;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .conception-calculator {
+    padding: 1rem;
+  }
+
+  .conception-calculator h1 {
+    font-size: 2rem;
+  }
+
+  .calculator-form {
+    padding: 1.5rem;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    padding: 1rem;
+  }
+}
+
+/* Calendar Responsive Fixes */
+@media (max-width: 480px) {
+  .custom-calendar {
+    font-size: 14px;
+  }
+}
+
+.date-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+}
+
+.calendar-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #d23669;
+  width: auto;
+}
+
+.calendar-button:hover {
+  color: #b52c57;
+  background: none;
+}
+
+.calendar-popup {
+  position: absolute;
+  z-index: 1000;
+  margin-top: 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-calendar {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Update the calculate button to distinguish it from the calendar button */
+.calculate-button {
+  width: 100%;
+  padding: 1rem;
+  background: #d23669;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.calculate-button:hover {
+  background: #b52c57;
+}
+
+/* Responsive styles for the calendar popup */
+@media (max-width: 768px) {
+  .calendar-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    padding: 1rem;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-calendar {
+    width: 100% !important;
+  }
+} 
+
+
+
+/* Add these styles for the fertility information section */
+
+.fertility-info-section {
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.fertility-header {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+}
+
+.highlight-box {
+  background: rgba(255, 107, 107, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.highlight-icon {
+  font-size: 2.5rem;
+  color: #ff6b6b;
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.15);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-left: 3px solid #ff6b6b;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.timeline-icon {
+  font-size: 2rem;
+}
+
+.love-grid, .tracking-grid, .tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.love-card, .tracking-card, .tip-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.love-card:hover, .tracking-card:hover, .tip-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon, .tracking-icon, .tip-icon {
+  font-size: 2rem;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.benefit-list, .tracking-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.benefit-list li, .tracking-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.benefit-list li::before, .tracking-list li::before {
+  content: "•";
+  color: #ff6b6b;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.tracking-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tip-card {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h4 {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .highlight-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-bottom: 3px solid #ff6b6b;
+  }
+
+  .love-grid, .tracking-grid, .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

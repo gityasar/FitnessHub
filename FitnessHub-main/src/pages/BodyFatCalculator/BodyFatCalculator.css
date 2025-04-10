@@ -1,0 +1,207 @@
+/* Main Container */
+.body-fat-calculator-container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 15px;
+  animation: fadeIn 0.5s ease-out;
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+
+}
+
+/* Header */
+.body-fat-calculator-container h1 {
+  text-align: center;
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  margin-bottom: 30px;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Content Layout */
+.body-fat-content {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);; */
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 25px;
+  border: 1px solid #3498db;
+}
+
+
+/* Form Styling */
+.body-fat-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  /* gap: 15px; */
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+/* Input Styling */
+.form-group input[type="number"] {
+  width: 90%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input[type="number"]:focus {
+  outline: none;
+  border-color: #1e3c72;
+  box-shadow: 0 0 0 2px rgba(30, 60, 114, 0.1);
+}
+
+/* Gender Options */
+.gender-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 8px;
+}
+
+.gender-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #f8f9fa;
+  font-size: 0.95rem;
+}
+
+/* Submit Button */
+/* .body-fat-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+} */
+
+/* .body-fat-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.2);
+} */
+
+/* Result Section */
+.result {
+  margin-top: 25px;
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  animation: slideUp 0.5s ease-out;
+}
+
+.result h2 {
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.result p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body-fat-content {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .gym-image {
+    max-width: 70%;
+  }
+
+  .body-fat-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .body-fat-calculator-container {
+    margin: 15px auto;
+    padding: 10px;
+  }
+
+  .body-fat-content {
+    padding: 15px;
+  }
+
+  .gym-image {
+    max-width: 100%;
+  }
+
+  .form-group input[type="number"] {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .gender-options {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .gender-options label {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .body-fat-form button {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .result h2 {
+    font-size: 1.2rem;
+  }
+
+  .result p {
+    font-size: 1.8rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  

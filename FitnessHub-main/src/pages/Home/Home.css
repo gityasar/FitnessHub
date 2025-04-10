@@ -1,0 +1,815 @@
+/* Main Container */
+.home-container {
+  display: flex;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Left Section */
+.home-left {
+  flex: 1;
+  padding: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* gap: 20px; */
+  margin-top: 40px;
+}
+
+/* Logo Animation Container */
+.logo-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.home-logo {
+  font-size: 2.5rem;
+  color: #3498db;
+  animation: float 3s ease-in-out infinite;
+}
+
+.home-logo:nth-child(2) { animation-delay: 0.2s; }
+.home-logo:nth-child(3) { animation-delay: 0.4s; }
+.home-logo:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Typography */
+.home-left h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+   margin: 20px 0;
+  line-height: 1.2;
+}
+
+.home-left p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button Styling */
+.home-left button {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  width: fit-content;
+}
+
+.home-left button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+/* Right Section */
+.home-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.home-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.home-right img:hover {
+  transform: scale(1.02);
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);  margin-top: 40px;
+}
+
+.benefits-section h1 {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: #2c3e50;
+  margin-bottom: 50px;
+}
+
+.benefits-section h1 span {
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+.benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.benefit-card h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.benefit-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Calculators Section */
+.calculators-section {
+  padding: 80px 20px;
+  /* max-width: 1400px; */
+  /* margin: 0 auto;  */
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+}
+
+.calculators-section h1 {
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: #2c3e50;
+  margin-bottom: 50px;
+}
+
+.calculators-section h1 span {
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+.calculator-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 50px;
+}
+
+.calculator-card {
+  background: white;
+  padding: 30px;
+  border: 2px solid #3498db;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.calculator-card svg {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+.calculator-card:hover svg {
+  color: white;
+}
+
+.calculator-card h2 {
+  font-size: 1.3rem;
+}
+
+/* AI Section */
+.container {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img-container {
+  flex: 1;
+  padding: 30px;
+}
+
+.img-container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+  flex: 1;
+  padding: 40px;
+  color: white;
+}
+
+.text-container h3 {
+  font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+  margin-bottom: 20px;
+  color: white;
+}
+
+.text-container p {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.ai-button {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3498db;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ai-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .text-container {
+    text-align: center;
+  }
+
+  .img-container img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-cards {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+
+  .calculator-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .home-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .logo-container {
+    justify-content: center;
+  }
+
+  .home-logo {
+    font-size: 2rem;
+  }
+
+  .benefits-section,
+  .calculators-section {
+    padding: 40px 20px;
+  }
+
+  .img-container img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 10px;
+  }
+
+  .benefit-card,
+  .calculator-card {
+    padding: 20px;
+  }
+
+  .text-container {
+    padding: 30px 20px;
+  }
+
+  .text-container button {
+    width: 100%;
+  }
+
+  .home-left button {
+    width: 100%;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.home-container,
+.benefits-section,
+.calculators-section,
+.content {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Nutrition Section */
+.nutri-section {
+  padding: 60px 5%;
+  background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 100%);
+}
+
+.nutri-section h1 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #2c3e50;
+  margin-bottom: 50px;
+}
+
+.nutri-section h1 span {
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  position: relative;
+}
+
+.nutri-section h1 span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #3498db, #3498db);
+  border-radius: 2px;
+}
+
+.nutri-content {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nutri-text {
+  flex: 1;
+}
+
+.nutri-text h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #2c3e50;
+  margin-bottom: 30px;
+  line-height: 1.4;
+}
+
+.nutri-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.nutri-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+.nutri-features .icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nutri-image {
+  flex: 1;
+  position: relative;
+}
+
+.nutri-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.nutri-image img:hover {
+  transform: translateY(-10px);
+}
+
+.get-started-btn {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.2);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nutri-content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nutri-section {
+    padding: 40px 5%;
+  }
+
+  .nutri-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .nutri-features li {
+    justify-content: center;
+  }
+
+  .nutri-image img {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nutri-section {
+    padding: 30px 5%;
+  }
+
+  .nutri-features li {
+    font-size: 1rem;
+  }
+
+  .nutri-features .icon {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .get-started-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nutri-content {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Add these styles to your existing Home.css */
+
+.women-container {
+  padding: 4rem 2rem;
+  /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+  
+  background: linear-gradient(135deg, #fff0f6 0%, #ffe3ec 50%, #ffd6e7 100%);}
+
+.women-div {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.women-text-contain {
+  padding-right: 2rem;
+}
+
+.women-main-title{
+  color: #2c3e50;
+  background: linear-gradient(135deg, #040506, #db34a1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;  
+  font-size: 2.5rem;
+}
+
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item:hover{
+  border: 1px solid #db34a1;
+}
+
+.feature-item {
+  background: white;
+  /* padding: 1.5rem; */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+
+.women-image-container {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.women-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width: 1024px) {
+  .women-div {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .women-text-contain {
+    padding-right: 0;
+  }
+
+  .women-image-container {
+    order: -1;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .women-container {
+    padding: 4rem 1rem;
+  }
+
+  .women-text-contain h2 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.women-main-title {
+  text-align: center;
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.women-text-contain h2 {
+  font-size: 2rem;
+  color: #3498db;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .women-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Add to your existing CSS */
+.home-container a {
+  text-decoration: none;
+}
+
+/* Add these styles for the yoga section */
+
+.yoga-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.yoga-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.yoga-text {
+  padding-right: 2rem;
+}
+
+.yoga-text h2 {
+  font-size: 2.5rem;
+  
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.yoga-text p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.yoga-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(93, 64, 55, 0.2);
+}
+
+.yoga-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(93, 64, 55, 0.3);
+}
+
+.yoga-button .arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.yoga-button:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+.yoga-image {
+  position: relative;
+}
+
+.yoga-illustration {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.yoga-illustration:hover {
+  transform: translateY(-10px);
+}
+
+@media (max-width: 968px) {
+  .yoga-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .yoga-text {
+    padding-right: 0;
+  }
+
+  .yoga-text h2 {
+    font-size: 2rem;
+  }
+
+  .yoga-image {
+    order: -1;
+  }
+
+  .yoga-illustration {
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .yoga-section {
+    padding: 3rem 1rem;
+  }
+
+  .yoga-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .yoga-text p {
+    font-size: 1rem;
+  }
+
+  .yoga-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .yoga-illustration {
+    max-width: 100%;
+  }
+}

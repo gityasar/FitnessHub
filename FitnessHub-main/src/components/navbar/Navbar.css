@@ -1,0 +1,152 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-logo a {
+  display: flex;
+  align-items: center; /* Ensures both logo and typewriter text are aligned */
+  text-decoration: none; /* Removes link underline */
+}
+
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+  object-fit: contain;
+}
+
+.navbar-typewriter {
+  font-size: 1.3rem; /* Adjust the font size of the typewriter text */
+  color: #2c3e50; /* Set the color for the text */
+  white-space: nowrap; /* Prevent text wrapping */
+  font-weight: bold;
+}
+
+/* Links Container */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+/* Individual Links */
+.navbar-links a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-links a:hover {
+  color: #3498db;
+  background: rgba(52, 152, 219, 0.1);
+}
+
+/* Active Link */
+.active-link {
+  color: #3498db !important;
+  background: rgba(52, 152, 219, 0.1);
+}
+
+/* Mobile Menu Button */
+/* .mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+}
+
+.mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+  color: #2c3e50;
+} */
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 1rem;
+  }
+  
+  .navbar-links a {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden; 
+  }
+
+  .navbar {
+    padding: 1rem 20px;
+  }
+
+  .navbar-links{
+    display: none;
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 15px;
+  }
+
+  .navbar-logo img {
+    height: 35px;
+  }
+}
+
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Animation for Mobile Menu */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar-links.active {
+  animation: slideIn 0.3s ease forwards;
+}
+
+/* Sidebar */

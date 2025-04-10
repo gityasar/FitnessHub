@@ -1,0 +1,125 @@
+/* Main Container */
+.bmi-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.bmi-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.bmi-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.bmi-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bmi-form h2 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* button {
+  width: 100%;
+  padding: 1rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+/* button:hover {
+  background: #2980b9;
+} */
+
+.bmi-result {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.bmi-result h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.category-underweight { color: #e74c3c; }
+.category-normal { color: #27ae60; }
+.category-overweight { color: #f39c12; }
+.category-obese { color: #c0392b; }
+
+.bmi-scale {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.scale-bar {
+  height: 8px;
+  background: linear-gradient(to right, #e74c3c, #27ae60, #f39c12, #c0392b);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.scale-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+  .bmi-container {
+    padding: 1rem;
+  }
+
+  .main-heading {
+    font-size: 2rem;
+  }
+
+  .bmi-form {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,451 @@
+.periods-calculator {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.periods-calculator h1 {
+  text-align: center;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+/* Custom Calendar Styles */
+.custom-calendar {
+  width: 100% !important;
+  max-width: 600px;
+  padding: 1rem;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 8px !important;
+  font-family: inherit !important;
+}
+
+.react-calendar__navigation {
+  margin-bottom: 1rem !important;
+}
+
+.react-calendar__navigation button {
+  color: #2c3e50 !important;
+  background: white !important;
+  min-width: 44px !important;
+  font-size: 16px !important;
+  margin: 0 2px !important;
+}
+
+.react-calendar__month-view__weekdays {
+  color: #2c3e50 !important;
+  font-weight: bold !important;
+}
+
+.react-calendar__tile {
+  padding: 0.75em 0.5em !important;
+  font-size: 14px !important;
+  color: #2c3e50 !important;
+}
+
+.react-calendar__tile--active {
+  background: #3498db !important;
+  color: white !important;
+}
+
+.react-calendar__tile:enabled:hover {
+  background: #e6f3fa !important;
+}
+
+/* Rest of the styles */
+.calculator-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.period-day {
+  background-color: #ff4d4d !important;
+  color: white !important;
+}
+
+.ovulation-day {
+  background-color: #4CAF50 !important;
+  color: white !important;
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.input-group input[type="number"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* button {
+  width: 100%;
+  padding: 1rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+/* button:hover {
+  background: #2980b9;
+} */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.month-calendar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.month-calendar h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.calendar {
+  width: 100%;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.legend-color.period-day {
+  background-color: #ffcdd2;
+}
+
+.legend-color.ovulation-day {
+  background-color: #c8e6c9;
+}
+
+/* React Calendar Overrides */
+.react-calendar {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.react-calendar__tile--active {
+  background: #3498db !important;
+}
+
+@media (max-width: 768px) {
+  .periods-calculator {
+    padding: 1rem;
+
+  }
+
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add these styles for the menstrual cycle information */
+
+.menstrual-info-section {
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.info-card-wrapper {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.info-card-header {
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  padding: 2rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-icon {
+  font-size: 2rem;
+}
+
+.cycle-intro {
+  padding: 2rem;
+}
+
+.intro-card {
+  background: rgba(255, 105, 180, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.intro-icon {
+  font-size: 2.5rem;
+  color: #ff1493;
+}
+
+.featured-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.cycle-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  color: #ff1493;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.phase-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.phase-card:hover {
+  transform: translateY(-5px);
+}
+
+.phase-icon {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.phase-details {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.phase-details li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.phase-details li::before {
+  content: "•";
+  color: #ff1493;
+  position: absolute;
+  left: 0;
+}
+
+.cycle-timeline {
+  padding: 2rem;
+}
+
+.timeline {
+  position: relative;
+  padding: 3rem 0;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, #ff69b4, #ff1493);
+}
+
+.timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-marker::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: #ff1493;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+}
+
+.day {
+  font-weight: bold;
+  color: #ff1493;
+}
+
+.event {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.fact-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.fact-card:hover {
+  transform: translateY(-5px);
+}
+
+.fact-icon {
+  font-size: 2rem;
+  color: #ff1493;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+h3 {
+  color: #2c3e50;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+h4 {
+  color: #ff1493;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .intro-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .cycle-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .timeline::before {
+    width: 2px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+  }
+
+  .facts-grid {
+    grid-template-columns: 1fr;
+  }
+}   
