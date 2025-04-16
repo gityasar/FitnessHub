@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; Made with 💙 by Yogesh Verma.</p>
+        <p>&copy; Made with 💙 by Md Yasar Mossayeed.</p>
       </div>
     </footer>
   );
